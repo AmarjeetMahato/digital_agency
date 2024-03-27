@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import {motion} from "framer-motion"
 import { AlignJustify, X } from "lucide-react";
 import DropDownMenu from './DropDownMenu';
+import Image from 'next/image';
 
 const Navbar = () => {
      const [isDropDownVisible, setIsDropDownVisible] = useState<boolean>(true)
@@ -21,8 +22,15 @@ const Navbar = () => {
      <nav>
           <div className=' p-6 md:p-10 flex items-center justify-between z-50  '>
           <div className=' '>
-                  <Link href={"/"}>
-                     <p className=' text-white w-10 h-10 md:w-14 md:h-14'>logo</p>
+                  <Link href={"/"} className=' cursor-pointer'>
+                  <Image
+              priority
+              src="/logo/logo.svg"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="w-10 h-10 md:w-14 md:h-14"
+            />
                   </Link>
           </div>
 
