@@ -27,7 +27,7 @@ const stores = [
 const ShopifyStores = () => {
   return (
     <section
-      className=" mt-10 md:py-10 bg-[#f6f5f4] w-full
+      className=" mt-10 md:py-10 bg-[#f1ede8] w-full
     rounded-3xl
   
   "

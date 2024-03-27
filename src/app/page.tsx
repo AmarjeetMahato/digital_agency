@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import SliderOne from "@/components/SliderOne";
 import WebsiteDesign from "@/components/WebsiteDesign";
+import Brands from "@/components/ui/Brands";
+import Services from "@/components/ui/Services";
 import GraphicDesign from "@/components/ui/graphic-design";
 import ShopifyStores from "@/components/ui/shopify-stores";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -43,6 +45,14 @@ export default function Home() {
 
         <div >
           <ShopifyStores />
+        </div>
+
+        <div >
+          <Brands />
+        </div>
+
+        <div>
+        <Services />
         </div>
           </div>
     </main>
