@@ -1,7 +1,9 @@
 import Navbar from "@/components/Navbar";
 import SliderOne from "@/components/SliderOne";
 import WebsiteDesign from "@/components/WebsiteDesign";
+import { InfiniteMovingCardsDemo } from "@/components/snippets/infinite-moving-card-snippet";
 import Brands from "@/components/ui/Brands";
+import FAQS from "@/components/ui/FAQS";
 import Services from "@/components/ui/Services";
 import GraphicDesign from "@/components/ui/graphic-design";
 import ShopifyStores from "@/components/ui/shopify-stores";
@@ -54,6 +56,9 @@ export default function Home() {
         <div>
         <Services />
         </div>
+
+        <InfiniteMovingCardsDemo />
+        <FAQS />
           </div>
     </main>
   );
