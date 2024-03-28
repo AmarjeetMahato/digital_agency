@@ -6,7 +6,21 @@ import { AlignJustify, X } from "lucide-react";
 import DropDownMenu from './DropDownMenu';
 import Image from 'next/image';
 
-const Navbar = () => {
+interface NavbarProps {
+        scrollToWebsiteDesign: () => void;
+        scrollToGraphicDesign: () => void;
+        scrollToShopifyStores: () => void;
+        scrollToBrands: () => void;
+        scrollToServices: () => void; // Define scrollToServices function
+      }
+
+const Navbar = ({
+  scrollToWebsiteDesign,
+  scrollToGraphicDesign,
+  scrollToShopifyStores,
+  scrollToBrands,
+  scrollToServices, // Add scrollToServices to props
+}: NavbarProps) => {
      const [isDropDownVisible, setIsDropDownVisible] = useState<boolean>(true)
 
      const toggleDropDown = () => {
@@ -34,14 +48,32 @@ const Navbar = () => {
                   </Link>
           </div>
 
-          <div className=' cursor-pointer hidden md:flex space-x-10 items-center text-slate-300 text-center bg-clip-text text-transparent
-            bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50'>
-                    <h1 className=' hover:text-gray-50 '>Website Design</h1>
-                    <h1 className=' hover:text-gray-50 '>   Graphic Design</h1>
-                    <h1 className=' hover:text-gray-50 '> Shopify Stores</h1>
-                    <h1 className=' hover:text-gray-50 '>  Brands</h1>
-                    <Link href={"/pricing"} className=' hover:text-gray-50 '> Pricing</Link>
+          <div
+          className="cursor-pointer hidden 
+            md:flex space-x-10 items-center
+             text-slate-300 text-center 
+             bg-clip-text text-transparent 
+             bg-gradient-to-b from-neutral-50
+              to bg-neutral-400 bg-opacity-50"
+        >
+          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
+            Website Design
           </div>
+          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
+            Graphic Design
+          </div>
+
+          <div onClick={scrollToShopifyStores} className="hover:text-gray-50">
+            Shopify Stores
+          </div>
+          <div onClick={scrollToBrands} className="hover:text-gray-50">
+            Brands
+          </div>
+
+          <Link href="/pricing" className="hover:text-gray-50">
+            Pricing
+          </Link>
+        </div>
 
           <div className=' flex md:hidden'>
                   {!isDropDownVisible ? (
